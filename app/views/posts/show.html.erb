@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @post.twt %></h1>
+  
+<hr class="my-4">
+  
+  <p class="lead">
+
+    <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %> 
+    <%end%>
+<%= link_to 'Back', posts_path,class:"btn btn-secondary" %>
+  </p>
+</div>
